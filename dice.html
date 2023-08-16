@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice roller</title>
+    <style>
+        .dice-img {
+            height: 400px;
+            margin: auto;
+            display: block;
+        }
+
+        .roll-button {
+            background-color: cornflowerblue;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: large;
+            cursor: pointer;
+        }
+        .head{
+            text-align: center;
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="head">Roll the dice</h1>
+    <img src="./icons8-dices-68.png" class="dice-img" id="img-source">
+    <button class="roll-button" onclick="clickoutput()">Click to Roll</button>
+    <script>
+        function clickoutput() {
+            const randomnumber = Math.round(Math.random() * (6 - 1) + 1);
+            console.log(randomnumber);
+            const diceimage = document.getElementById('img-source');
+            if (randomnumber == 1) {
+                diceimage.src = "https://img.icons8.com/?size=512&id=o1dGziQOijg4&format=png";
+            }
+            else if (randomnumber == 2) {
+                diceimage.src = "https://img.icons8.com/?size=512&id=Fwcx5mpkWd8P&format=png";
+            }
+            else if (randomnumber == 3) {
+                diceimage.src = "https://img.icons8.com/?size=512&id=q4ul9MoiyRtB&format=png";
+            }
+            else if (randomnumber == 4) {
+                diceimage.src = "https://img.icons8.com/?size=512&id=ByJ6Sp3X3_cv&format=png";
+            }
+            else if (randomnumber == 5) {
+                diceimage.src = "https://img.icons8.com/?size=512&id=5iWV5u7ve3PJ&format=png";
+            }
+            else {
+                diceimage.src = "https://img.icons8.com/?size=512&id=sL5WaT_mFUmK&format=png";
+            }
+        }
+    </script>
+</body>
+
+</html>
